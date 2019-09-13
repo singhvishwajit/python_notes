@@ -1,0 +1,44 @@
+# pip is used to install and manage software packages written in Python. Following are some of the commonly used pip commands. 
+
+# To bring up all the commands and options you can use with pip 
+    $ pip help
+
+# To bring up options for a specific command
+   `$ pip help 'query' 
+
+# Finding a package
+    $ pip search "query" 
+        returns package name and description of the package
+        
+# Installing pacakages
+    $ pip install SomePackage            # latest version
+    $ pip install SomePackage==1.0.4     # specific version
+    $ pip install 'SomePackage>=1.0.4'     # minimum version
+
+# Unistalling packages
+    $ pip uninstall SomePackage
+    
+# To list installed packages and their current version
+    $ pip list
+    
+# To list outdated packages and show the latest version available
+    $ pip list -o
+    $ pip list --outdated
+    
+# To upgrade a package to the latest version
+    $ pip install -U SomePackage
+
+# To output all the packages and versions in a requirements format
+    $ pip freeze 
+
+# To hold the results from pip freeze into a requirements.txt file
+    $ pip freeze > requirements.txt
+
+# To install packages using requirements.txt file
+    $ pip install -r requirements.txt
+
+# To upgrade multiple packages at one
+    $ pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+        Cut command - makes sure only package name is returned
+        Last command - goes through each package that needs upgrading and does so
+        stackoverflow link: https://stackoverflow.com/questions/2720014/how-to-upgrade-all-python-packages-with-pip
