@@ -4,7 +4,7 @@
     $ pip help
 
 # To bring up options for a specific command
-   `$ pip help 'query' 
+    $ pip help 'query' 
 
 # Finding a package
     $ pip search "query" 
@@ -42,3 +42,8 @@
         Cut command - makes sure only package name is returned
         Last command - goes through each package that needs upgrading and does so
         stackoverflow link: https://stackoverflow.com/questions/2720014/how-to-upgrade-all-python-packages-with-pip
+
+
+
+
+
