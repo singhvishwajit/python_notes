@@ -1,0 +1,30 @@
+# venv is used to create a virtual environment when using python 3.3 or higher.
+# venv helps separate different python environments for different projects. 
+# venv creates an isolated environment with dependencies and packages that are installed only in that environment and not globally.
+# through venv we can avoid breaking websites when we upgrade packages globally.
+
+# To create a virtual environment
+    $ python -m venv name_of_virtual_environement
+    
+# To activate a virtual environment 
+    $ . name_of_virtual_environment/Scripts/activate
+    
+# To deactivate a virtual environment
+    $ deactivate
+    
+# To remove a virtual environment
+    $ rmdir name_of_virtual_environment /s (windows command prompt)
+    $ rm -r name_of_virtual_environment   (Gitbash)
+
+# don't commit venv to source control
+# commit requirements.txt file instead
+
+# To create environment with system packages
+    $ python -m venv venv --system--site-packages
+        Additional packages that we install in this virtual environment will not affect system packages
+
+# To check what packages we have installed only in the virtual environment
+    $ pip list --local 
+    
+# To create package list for requirements.txt file for packages we have installed only in the virtual environment
+    $ pip freeze --local
