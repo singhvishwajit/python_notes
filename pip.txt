@@ -39,11 +39,7 @@
 
 # To upgrade multiple packages at one
     $ pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
-        Cut command - makes sure only package name is returned
-        Last command - goes through each package that needs upgrading and does so
+        cut command is used to make sure only package name is returned
+        xargs command is used to go through each package that needs upgrading and upgrade it
         stackoverflow link: https://stackoverflow.com/questions/2720014/how-to-upgrade-all-python-packages-with-pip
-
-
-
-
-
+        
