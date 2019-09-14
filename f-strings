@@ -1,0 +1,57 @@
+# f-strings is a new way to format strings in Python 3.6 and above
+
+# String formatting using format method
+	first_name = 'John'
+	last_name = 'Doe'
+
+  sentence = 'My name is {} {}'.format(first_name, last_name)
+	print(sentence)
+
+# String formatting using f-strings
+  sentence = f'My name is {first_name} {last_name}'
+	print(sentence)
+
+# Using methods with f-strings
+	sentence = f'My name is {first_name.upper()} {last_name.upper()}'
+	print(sentence)
+
+# String formatting using format method in case of dictionaries
+  person = {'name': 'John', 'age': 30}
+	sentence = 'My name is {} and I am {} years old'.format(person['name'], person['age'])
+	print(sentence)	
+	
+# String formatting using f-strings in case of dictionaries 
+  sentence = f"My name is {person['name']} and I am {person['age']} years old"
+	print(sentence)
+
+# Calculations from within the f-string
+  calculation = f'4 times 11 is equal to {4 * 11}'
+	print(calculation)
+
+# Advanced formatting within the f-string: 0 pad for 2 digits
+  for n in range(1, 11):
+		 sentence = f'The  value is {n}'
+		 print(sentence)
+
+	for n in range(1, 11):
+	  sentence = f'The  value is {n:01}' [0 pad for 2 digits]
+	  print(sentence)
+
+# Advanced formatting within the f-string: print to 4 digits of floating point values
+	pi = 3.14159265
+  sentence = f'Pi is equal to {pi:.4f}' [print to 4 digits of floating point values]
+	print(sentence)
+
+# from datetime import datetime
+
+	birthday = datetime(1990, 1, 1)
+
+	sentence = f'John has a birthday on {birthday}'
+	print(sentence)
+  output: John has a birthday on 1990-01-01 00:00:00 
+  
+  sentence = f'John has a birthday on {birthday:%B %d, %Y}'
+	print(sentence)
+  output: John has a birthday on January 01, 1990
+  
+  
