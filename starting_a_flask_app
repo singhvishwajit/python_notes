@@ -1,0 +1,11 @@
+# Create a project folder on Desktop
+# Navigate to the project folder using command line
+# Create a virtual environment using python -m venv venv
+# pip list to check all packages installed in virtual envvironment(venv)
+# Upgrade any packages if required
+# Install flask using pip install flask
+# Use python interpretor to import flask, if no error flask installed correctly
+# Double verify flask installation using pip list
+# Set FLASK_APP to application.py (or name_of_python_app.py) using export FLASK_APP=application.py
+# Set debug mode to true using export DEBUG_MODE=1
+# Run the application using flask run
