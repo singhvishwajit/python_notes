@@ -1,7 +1,8 @@
 # Create a project folder on Desktop
 # Navigate to the project folder using command line
 # Create a virtual environment using python -m venv venv
-# pip list to check all packages installed in virtual envvironment(venv)
+# pip list to check all packages installed in virtual environment(venv)
+# Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
 # Upgrade any packages if required
 # Install flask using pip install flask
 # Use python interpretor to import flask, if no error flask installed correctly
