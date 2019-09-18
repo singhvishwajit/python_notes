@@ -1,0 +1,64 @@
+# With Beautiful Soup and Requests libraries
+
+Create a web_scraping folder on desktop
+Navigate to that folder using command line
+Create a virtual environment using python -m venv venv
+Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
+Pip list to check all installed files in virtual environment
+Install beautiful soup using $ pip install beautifulsoup4
+Differences between parsers: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers
+Install xml parser using $ pip install lxml
+Install requests library using pip install requests
+
+# simple.html
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>Test - A Sample Website</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <h1 id='site_title'>Test Website</h1>
+        <hr></hr>
+        <div class="article">
+            <h2><a href="article_1.html">Article 1 Headline</a></h2>
+            <p>This is a summary of article 1</p>
+        </div>
+        <hr></hr>
+        <div class="article">
+            <h2><a href="article_2.html">Article 2 Headline</a></h2>
+            <p>This is a summary of article 2</p>
+        </div>
+        <hr></hr>
+
+        <div class='footer'>
+            <p>Footer Information</p>
+        </div>
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+# Code to print out all of the HTML
+
+from bs4 import BeautifulSoup
+import requests
+
+with open('simple.html') as html_file
+  soup = BeautifulSoup(html_file, 'lxml')
+
+print(soup) [prints out all of the HTML]
+print(soup.prettify()) [prints out indented HTML]
+
+match = soup.title
+print(match) [prints out the title tag of the HTML page]
+
+match = soup.title.text
+print(match) [prints out the text within the title tags]
+
+
