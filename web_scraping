@@ -7,7 +7,8 @@ Activate the virtual environment using $ . name_of_virtual_environment/Scripts/a
 Pip list to check all installed files in virtual environment
 Install beautiful soup using $ pip install beautifulsoup4
 Differences between parsers: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers
-Install xml parser using $ pip install lxml
+    html5lib parser uses techniques that are part of the HTML5 standard.
+Install lxml parser using $ pip install lxml
 Install requests library using pip install requests
 
 # simple.html
@@ -49,8 +50,8 @@ Install requests library using pip install requests
 from bs4 import BeautifulSoup
 import requests
 
-with open('simple.html') as html_file
-  soup = BeautifulSoup(html_file, 'lxml')
+with open('simple.html') as html_file [passing content as html file]
+  soup = BeautifulSoup(html_file, 'lxml') [passing html file to Beautiful Soup]
 
 print(soup) [prints out all of the HTML]
 print(soup.prettify()) [prints out indented HTML]
@@ -62,3 +63,8 @@ match = soup.title.text
 print(match) [prints out the text within the title tags]
 
 
+# Code to print out all of the image_links from an academy of ideas article
+
+for images in soup.find_all('div', class_='art-flex-box'):
+	image_url = images.a['href']
+	print(image_url)
