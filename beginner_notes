@@ -1,0 +1,5 @@
+python2 -> python3
+  print statement has become the print function.
+    print "hello world" -> print("hello world")
+  raw_input function has changed to input.
+    raw_input("What is your name?") -> input("What is your name?")
