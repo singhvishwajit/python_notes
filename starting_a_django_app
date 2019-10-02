@@ -1,0 +1,12 @@
+# Create a project folder on Desktop
+# Navigate to the project folder using command line
+# Create a virtual environment using python -m venv venv
+# Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
+# Use pip list to check all packages installed in virtual environment(venv)
+# Upgrade any packages if required
+# Install django using pip install django
+# Check if django installed correctly using command python -m django --version. The command will return the installed django version.
+# Use django-admin to get a list of subcommands for django. 
+# Use django-admin startproject project_name to create a project directory. 
+# Navigate to the project directory using the cd command. 
+# Use python manage.py runserver to run the server to see our django project on localhost.
