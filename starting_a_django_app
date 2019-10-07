@@ -1,12 +1,41 @@
-# Create a project folder on Desktop
-# Navigate to the project folder using command line
-# Create a virtual environment using python -m venv venv
-# Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
-# Use pip list to check all packages installed in virtual environment(venv)
-# Upgrade any packages if required
-# Install django using pip install django
-# Check if django installed correctly using command python -m django --version. The command will return the installed django version.
-# Use django-admin to get a list of subcommands for django. 
-# Use django-admin startproject project_name to create a project directory. 
-# Navigate to the project directory using the cd command. 
-# Use python manage.py runserver to run the server to see our django project on localhost.
+Starting a Django Project
+  # Create a project folder on Desktop
+  # Navigate to the project folder using command line
+  # Create a virtual environment using python -m venv venv
+  # Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
+  # Use pip list to check all packages installed in virtual environment(venv)
+  # Upgrade any packages if required
+  # Install django using pip install django
+  # Check if django installed correctly using command python -m django --version. The command will return the installed django version.
+  # Use django-admin to get a list of subcommands for django. 
+  # Use django-admin startproject project_name to create a project directory. 
+  # Navigate to the project directory using the cd command. 
+  # Use python manage.py runserver to run the server to see our django project on localhost.
+
+Creating a new Django App 
+  # Create a new app using python manage.py startapp blog
+
+In views.py file
+# from django.http import HttpResponse
+   # Create views using
+# def home(request):
+	return HttpResponse('<h1>Blog Home</h1>')
+	
+# def about(request):
+	return HttpResponse('<h1>Blog About</h1>')
+  
+# Within blog app directory, create a urls.py file 
+# from django.urls import path
+# from . import views
+# urlpatterns = [
+  path('', views.home, name='blog-home'),
+  ]
+  
+ # Within project directory  urls.py import include function using
+ # from django.urls import path, include
+ 
+ # Add path for blog app
+ urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('blog.urls')),
+]
