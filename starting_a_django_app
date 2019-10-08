@@ -39,3 +39,15 @@ In views.py file
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
 ]
+
+Creating templates
+# Within the blog directory, create a new folder called templates
+# Within the templates folder, create another folder with the name of the app called blog
+# Inside blog folder, create templates about.html, home.html
+# To activate the templates, add app settings to the project settings.py file
+# Add 'blog.apps.BlogConfig' to the installed apps
+# Add def home(request):
+	return render(request, 'blog/home.html')
+	to the views.py file.
+	
+# To avoid repetitive code, create a template base.html inside the blog folder with other html templates.
