@@ -51,3 +51,20 @@ Creating templates
 	to the views.py file.
 	
 # To avoid repetitive code, create a template base.html inside the blog folder with other html templates.
+
+# Command to create a new superuser for Django Admin
+$ python manage.py createsuperuser
+https://stackoverflow.com/questions/32532900/not-able-to-create-super-user-with-django-manage-py
+
+# Migrations
+$ python manage.py makemigrations (Detect changes for migrations if new database tables etc. have been added)
+$ python manage.py migrate (Run migrations)
+
+# Run interactive shell
+$ python manage.py shell
+
+# To get all objects from a User model
+$ User.objects.all()
+# To get the first object from a User model
+$ User.objects.first()
+# Databases
