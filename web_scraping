@@ -5,6 +5,7 @@ Navigate to that folder using command line
 Create a virtual environment using python -m venv venv
 Activate the virtual environment using $ . name_of_virtual_environment/Scripts/activate
 Pip list to check all installed files in virtual environment
+To start python in interactive mode in gitbash use winpty python
 Install beautiful soup using $ pip install beautifulsoup4
 Differences between parsers: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#differences-between-parsers
     html5lib parser uses techniques that are part of the HTML5 standard.
