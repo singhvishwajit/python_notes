@@ -1,0 +1,11 @@
+Python is case sensitive.
+Spacing is important in Python since unlike other languages it isn't very heavy on syntax. 
+
+## Variables and Data Types
+
+### Variables
+A variable is used to hold a value which is the information we want to associate with the variable. 
+
+my_age = 30
+
+In the example above, my_age is the variable which is used to hold the value 30 which is the information i.e, my age that I want to associate with the variable. 
